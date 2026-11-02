@@ -11,7 +11,7 @@ function calculateDueDate(issueDate, loanDays = LOAN_DAYS) {
   return d.toISOString().slice(0, 10);
 }
 
-// Fine = Rs.2 for every full day the book is returned after the due date.
+// Fine: Rs.2 per late day (written on the feature branch).
 function calculateFine(dueDate, returnDate, perDay = FINE_PER_DAY) {
   const due = new Date(dueDate);
   const ret = new Date(returnDate);
@@ -21,5 +21,8 @@ function calculateFine(dueDate, returnDate, perDay = FINE_PER_DAY) {
   const daysLate = Math.floor((ret - due) / 86400000);
   return daysLate > 0 ? daysLate * perDay : 0;
 }
-
-module.exports = { calculateDueDate, calculateFine, LOAN_DAYS, FINE_PER_DAY };
+// Returns true if today is after the due date.
+function isOverdue(dueDate, today) {
+  return new Date(today) > new Date(dueDate);
+}
+module.exports = { calculateDueDate, calculateFine, isOverdue, LOAN_DAYS, FINE_PER_DAY };
