@@ -11,7 +11,7 @@ function calculateDueDate(issueDate, loanDays = LOAN_DAYS) {
   return d.toISOString().slice(0, 10);
 }
 
-// Fine = Rs.2 for every full day the book is returned after the due date.
+// Fine: Rs.2 per full day late, zero if returned on time (bugfix branch).
 function calculateFine(dueDate, returnDate, perDay = FINE_PER_DAY) {
   const due = new Date(dueDate);
   const ret = new Date(returnDate);
