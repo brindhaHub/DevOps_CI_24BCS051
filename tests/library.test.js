@@ -1,7 +1,7 @@
 'use strict';
 const test = require('node:test');
 const assert = require('node:assert');
-const { calculateDueDate, calculateFine } = require('../src/library');
+const { calculateDueDate, calculateFine, isOverdue } = require('../src/library');
 
 test('due date is 14 days after the issue date', () => {
   assert.strictEqual(calculateDueDate('2026-10-01'), '2026-10-15');
@@ -21,4 +21,7 @@ test('Rs.2 per day when returned late', () => {
 
 test('invalid date throws an error', () => {
   assert.throws(() => calculateDueDate('not-a-date'), /Invalid/);
+});
+test('isOverdue is true after the due date', () => {
+  assert.strictEqual(isOverdue('2026-10-15', '2026-10-20'), true);
 });

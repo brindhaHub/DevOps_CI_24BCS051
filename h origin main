@@ -1,0 +1,13 @@
+*   [33m62b968b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Resolve merge conflict in fine comment
+[31m|[m[32m\[m  
+[31m|[m * [33mb32c3a0[m[33m ([m[1;32mbugfix-24BCS051[m[33m)[m docs: reword fine comment on bugfix branch
+[31m|[m * [33m5329d23[m fix: clarify README setup note
+* [32m|[m   [33m6e74c55[m Merge feature-24BCS051 into main
+[32m|[m[34m\[m [32m\[m  
+[32m|[m [34m|[m[32m/[m  
+[32m|[m[32m/[m[34m|[m   
+[32m|[m * [33md27f484[m[33m ([m[1;32mfeature-24BCS051[m[33m)[m docs: reword fine comment on feature branch
+[32m|[m * [33me984a57[m docs: reword fine comment on feature branch
+[32m|[m * [33m051d4d9[m feat: add isOverdue helper
+[32m|[m[32m/[m  
+* [33m97e271c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Initial commit: library due-date and fine rules
